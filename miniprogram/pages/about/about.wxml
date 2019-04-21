@@ -1,7 +1,7 @@
 <view>
   <scroll-view scroll-y class="scrollPage">
     <view class="UCenter-bg">
-      <!-- <view class="text-xxl text-white text-shadow">七月画室</view> -->
+      <view class="text-xxl text-white text-shadow">七月画室</view>
       <image src="/images/about/wave.gif" mode="scaleToFill" class="gif-wave"></image>
       <image src="/images/about/about-header.jpg" mode="scaleToFill" class="header-img"></image>
     </view>
@@ -53,5 +53,4 @@
     </view>
     <view class="cu-tabbar-height"></view>
   </scroll-view>
-  <!-- <tabbar pageCur='{{pageCur}}'></tabbar> -->
 </view>

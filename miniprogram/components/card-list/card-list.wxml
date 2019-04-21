@@ -1,27 +1,27 @@
-<view>
+<view class="padding-bottom bg-white shadow-lg">
 		<block wx:for="{{cardList}}" wx:key="index">
 		  <view class="cu-card case {{isCard?'no-card':''}}">
-		    <view class="cu-item shadow">
+		    <view class="cu-item">
 		      <view class="image" bindtap="onPhoto" data-header-img="{{item.headerImg}}">
 		        <image src="{{item.headerImg}}" mode="widthFix"></image>
 		        <view class="cu-tag bg-{{item.tagBgColor}}">{{item.tag}}</view>
 		        <!-- <view class="cu-bar bg-shadeBottom"> <text class="text-cut">{{item.headerImgText}}</text></view> -->
 		      </view>
-		      <view class="cu-list menu padding-tb-xs">
-		        <view class="cu-item">
+		      <!-- <view class="cu-list menu padding-tb-xs"> -->
+		        <!-- <view class="cu-item"> -->
 		          <!-- <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view> -->
-		          <view class="content flex-sub">
-		            <view class="text-grey">{{item.title}}</view>
-		            <view class="text-gray text-sm flex justify-end">
-		              <view class="text-gray text-sm">
-		                <text class="icon-attentionfill margin-lr-xs"></text>{{item.openTimes}}
+		          <!-- <view class="content flex-sub"> -->
+		            <!-- <view class="text-grey">{{item.title}}</view> -->
+		            <!-- <view class="text-gray text-sm flex justify-end"> -->
+		              <!-- <view class="text-gray text-sm"> -->
+		                <!-- <text class="icon-attentionfill margin-lr-xs"></text>{{item.openTimes}} -->
 		                <!-- <text class="icon-appreciatefill margin-lr-xs"></text> 20 -->
 		                <!-- <text class="icon-messagefill margin-lr-xs"></text> 30 -->
-		              </view>
-		            </view>
-		          </view>
-		        </view>
-		      </view>
+		              <!-- </view> -->
+		            <!-- </view> -->
+		          <!-- </view> -->
+		        <!-- </view> -->
+		      <!-- </view> -->
 		    </view>
 		  </view>
 		</block>

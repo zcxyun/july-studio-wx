@@ -7,12 +7,11 @@
       <view class="action">
         <text class="icon-title text-white"></text>{{item.name}}
       </view>
-      <view class="action" bindtap="onMore" data-id='{{item.id}}'>
+      <view class="action" bindtap="onMore" data-name='{{item.name}}'>
         <text class="text-white">更多 >></text>
       </view>
     </view>
     <card-list cardList="{{item.cardList}}" isCard="{{isCard}}"></card-list>
   </block>
   <view class="cu-tabbar-height"></view>
-  <!-- <tabbar pageCur='{{pageCur}}'></tabbar> -->
 </view>

@@ -21,9 +21,9 @@ Component({
 
   methods: {
     onMore(e) {
-      const id = e.currentTarget.dataset.id
+      const name = e.currentTarget.dataset.name
       wx.navigateTo({
-        url: '/pages/more/more?id=' + id
+        url: '/pages/more/more?name=' + name
       })
     },
     activeTabBar: function () {

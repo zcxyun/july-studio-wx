@@ -10,9 +10,9 @@ Component({
     cardInfo: {}
   },
   methods: {
-    initData: function (db, cid) {
+    initData: function (db, name) {
       db.collection('card').where({
-        id: Number(cid)
+        name: name
       }).get({
         success: res => {
           this.setData({
@@ -34,7 +34,7 @@ Component({
      */
     onLoad: function (res) {
       const db = wx.cloud.database()
-      this.initData(db, res.id)
+      this.initData(db, res.name)
     },
 
     /**

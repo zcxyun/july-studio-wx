@@ -8,7 +8,7 @@
 	"icon": "picfill",
 	"color": "orange",
 	"badge": 1,
-	"name": "简笔画"
+	"name": "创意"
 }
 {
 	"icon": "picfill",
@@ -20,31 +20,19 @@
 	"icon": "picfill",
 	"color": "olive",
 	"badge": 22,
-	"name": "水粉"
+	"name": "工笔"
 }
 {
 	"icon": "picfill",
 	"color": "cyan",
 	"badge": 0,
-	"name": "水彩"
+	"name": "国画"
 }
 {
 	"icon": "picfill",
 	"color": "blue",
 	"badge": 0,
-	"name": "国画"
-}
-{
-	"icon": "picfill",
-	"color": "purple",
-	"badge": 0,
-	"name": "油画"
-}
-{
-	"icon": "picfill",
-	"color": "mauve",
-	"badge": 0,
-	"name": "工笔"
+	"name": "软陶"
 }
 {
 	"icon": "picfill",
@@ -56,5 +44,23 @@
 	"icon": "picfill",
 	"color": "mauve",
 	"badge": 0,
-	"name": "白描"
+	"name": "水彩"
+}
+{
+	"icon": "picfill",
+	"color": "purple",
+	"badge": 0,
+	"name": "水粉"
+}
+{
+	"icon": "picfill",
+	"color": "mauve",
+	"badge": 0,
+	"name": "线描"
+}
+{
+	"icon": "picfill",
+	"color": "brown",
+	"badge": 0,
+	"name": "油画"
 }

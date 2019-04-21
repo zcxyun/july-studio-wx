@@ -20,9 +20,9 @@ Component({
   },
   methods: {
     onMore(e) {
-      const id = e.currentTarget.dataset.id
+      const name = e.currentTarget.dataset.name
       wx.navigateTo({
-        url: '/pages/more/more?id=' + id
+        url: '/pages/more/more?name=' + name
       })
     },
     tabSelect(e) {
@@ -82,7 +82,7 @@ Component({
       const db = wx.cloud.database()
       const _ = db.command
       db.collection('card').where({
-        name: _.neq('最近').and(_.neq('推荐'))
+        name: _.nin(['画室展示', '作品墙', '部分作品'])
       }).get({
         success: res => {
           this.setData({
@@ -103,7 +103,7 @@ Component({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-     
+
     },
 
     /**

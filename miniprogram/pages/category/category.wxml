@@ -1,7 +1,7 @@
 <view class="category-container">
   <cu-custom bgColor="bg-gradual-orange"><view slot="content">七月画室</view></cu-custom>
   <view class="VerticalBox">
-    <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{verticalNavTop}}" style="height:85vh; width: 22vw;">
+    <scroll-view class="VerticalNav nav shadow-lg" scroll-y scroll-with-animation scroll-top="{{verticalNavTop}}" style="height:85vh; width: 22vw;">
       <view class="cu-item {{item.id==tabCur?'navItemCur':''}}" wx:for="{{list}}" wx:key="id" bindtap="tabSelect"
         data-id="{{item.id}}">
         {{item.name}}
@@ -10,11 +10,11 @@
     <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:85vh;"
       scroll-into-view="main-{{mainCur}}" bindscroll="verticalMain">
       <view class="padding-top padding-lr" wx:for="{{list}}" wx:key="id" id="main-{{item.id}}">
-        <view class="cu-bar solid-bottom bg-gradual-orange">
+        <view class="cu-bar solid-bottom bg-gradual-orange shadow-lg">
           <view class="action">
             <text class="icon-title text-white"></text>{{item.name}}
           </view>
-          <view class="action" bindtap="onMore" data-id='{{item.id}}'>
+          <view class="action" bindtap="onMore" data-name='{{item.name}}'>
             <text class="text-white">更多 >></text>
           </view>
         </view>
@@ -22,5 +22,4 @@
       </view>
     </scroll-view>
   </view>
-  <!-- <tabbar pageCur='{{pageCur}}'></tabbar> -->
 </view>
