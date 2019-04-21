@@ -6,18 +6,22 @@ Component({
    * 页面的初始数据
    */
   data: {
-    content: []
+    content: [],
+    QRCodes: []
   },
   methods: {
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-      this.initData()
-    },
-    initData: function () {
+      wx.showLoading({
+        title: '加载中...',
+      })
       const db = wx.cloud.database()
-      const _ = db.command
+      this.initContent(db)
+      this.initQRCode(db)
+    },
+    initContent: function (db) {
       db.collection('we').get({
         success: res => {
           this.setData({
@@ -34,11 +38,28 @@ Component({
         }
       })
     },
+    initQRCode: function (db) {
+      db.collection('QR-code').get({
+        success: res => {
+          this.setData({
+            QRCodes: res.data
+          })
+          console.log('[数据库] [查询记录] 成功: ', res)
+        },
+        fail: err => {
+          wx.showToast({
+            icon: 'none',
+            title: '查询记录失败'
+          })
+          console.log('[数据库] [查询记录] 失败：', err)
+        }
+      })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+      wx.hideLoading()
     },
 
     /**
