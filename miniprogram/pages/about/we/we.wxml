@@ -1,0 +1,10 @@
+<view>
+  <cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">关于</view></cu-custom>
+  <view class='margin-xl bg-white padding-xl radius shadow-lg'>
+    <view class='text-center margin-bottom text-lg  text-grey'>关于七月画室</view>
+    <view class='text-content'>
+      <view>Hi！欢迎来到七月画室</view>
+      <view class='margin-top-sm' wx:for="{{content}}" wx:key="index">{{item.section}}</view>
+    </view>
+  </view>
+</view>

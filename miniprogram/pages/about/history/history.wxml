@@ -1,0 +1,16 @@
+<view>
+  <cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">画室历史</view></cu-custom>
+  <view class="cu-timeline">
+    <view class="cu-item text-green" wx:for="{{historyList}}" wx:key="index">
+      <view class="bg-gradual-green content shadow-blur">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-white text-green">{{item.address}}</view>
+          <view class="cu-tag line-white">{{item.time}}</view>
+        </view>
+        <view class="margin-top-sm text-content">
+          <view wx:for="{{item.contentList}}" wx:key="index" wx:for-item="content">{{content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

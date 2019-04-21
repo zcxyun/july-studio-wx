@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "card-list": "/components/card-list/card-list",
+    "card-swiper": "/components/card-swiper/card-swiper",
+    "icon-list": "/components/icon-list/icon-list"
+  }
+}

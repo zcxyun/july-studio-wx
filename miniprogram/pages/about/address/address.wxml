@@ -1,0 +1,6 @@
+<view>
+  <cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">画室位置</view></cu-custom>
+  <view class="margin-xl shadow-warp flex justify-center align-center radius">
+    <map class="map-cls" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{covers}}"></map>
+  </view>
+</view>

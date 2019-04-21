@@ -1,0 +1,5 @@
+/* pages/about/address/address.wxss */
+.map-cls {
+  width: 700rpx;
+  height: 1100rpx;
+}

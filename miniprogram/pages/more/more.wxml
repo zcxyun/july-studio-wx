@@ -1,0 +1,7 @@
+<view class="">
+  <cu-custom bgColor="bg-gradual-red" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">{{cardInfo.name}}</view>
+  </cu-custom>
+  <card-list cardList="{{cardInfo.cardList}}" isCard="{{isCard}}"></card-list>
+</view>

@@ -1,0 +1,5 @@
+/* components/card-list/card-list.wxss */
+
+.cu-card {
+  overflow: initial;
+}

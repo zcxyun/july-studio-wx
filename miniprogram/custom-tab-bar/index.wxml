@@ -1,0 +1,28 @@
+<view>
+  <!-- <home wx:if="{{pageCur=='home'}}"></home>
+  <category wx:if="{{pageCur=='category'}}"></category>
+  <about wx:if="{{pageCur=='about'}}"></about> -->
+  <view class="cu-bar tabbar bg-white shadow foot">
+    <view class="action" bindtap="NavChange" data-cur="home">
+      <view class='icon-cu-image'>
+        <text class="lg" class="icon-home{{pageCur == 'home'?'fill':''}} text-{{pageCur == 'home'?'red':'gray'}}">
+        </text>
+      </view>
+      <view class="{{pageCur=='home'?'text-red':'text-gray'}}">首页</view>
+    </view>
+    <view class="action" bindtap="NavChange" data-cur="category">
+      <view class='icon-cu-image'>
+        <text class="lg" class="icon-circle{{pageCur == 'category'?'fill':''}} text-{{pageCur == 'category'?'orange':'gray'}}">
+        </text>
+      </view>
+      <view class="{{pageCur=='category'?'text-orange':'text-gray'}}">分类</view>
+    </view>
+    <view class="action" bindtap="NavChange" data-cur="about">
+      <view class='icon-cu-image'>
+        <text class="lg" class="icon-people{{pageCur == 'about'?'fill':''}} text-{{pageCur == 'about'?'green':'gray'}}">
+        </text>
+      </view>
+      <view class="{{pageCur=='about'?'text-green':'text-gray'}}">关于</view>
+    </view>
+  </view>
+</view>

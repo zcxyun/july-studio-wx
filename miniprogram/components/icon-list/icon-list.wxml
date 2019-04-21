@@ -1,0 +1,17 @@
+<view>
+  <swiper class="screen-swiper bg-white {{dotStyle?'square-dot':'round-dot'}}" indicator-dots="{{true}}" indicator-color="#8799a3"
+    indicator-active-color="#0081ff">
+    <swiper-item wx:for="{{iconSwiperList}}" wx:key="index" wx:for-item="itemList">
+      <view class="cu-list grid col-4 no-border">
+        <view class="cu-item" wx:for="{{itemList}}" wx:key="index" bindtap="onIconTap" data-name="{{item.name}}">
+          <view class="icon-{{item.icon}} text-{{item.color}}">
+            <!-- <view class="cu-tag badge" v-if="item.badge!=0">
+              <block v-if="item.badge!=1">{{item.badge>99?'99+':item.badge}}</block>
+            </view> -->
+          </view>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
