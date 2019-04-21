@@ -1,11 +1,8 @@
-// pages/more/more.js
-import moreData from '../../data/more.js'
 Component({
   /**
    * 页面的初始数据
    */
   data: {
-    // cardsInfo: moreData.cardsInfo,
     isCard: false,
     cardInfo: {}
   },
@@ -33,6 +30,9 @@ Component({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (res) {
+      wx.showLoading({
+        title: '加载中...',
+      })
       const db = wx.cloud.database()
       this.initData(db, res.name)
     },
@@ -41,7 +41,7 @@ Component({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+      wx.hideLoading()
     },
 
     /**

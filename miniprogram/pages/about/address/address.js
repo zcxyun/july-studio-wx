@@ -1,4 +1,3 @@
-// pages/about/address/address.js
 Component({
   options: {
     addGlobalClass: true

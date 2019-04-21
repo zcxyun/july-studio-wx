@@ -1,5 +1,3 @@
-// pages/about/history/history.js
-import aboutData from '../../../data/about.js'
 Component({
   options: {
     addGlobalClass: true
@@ -8,7 +6,6 @@ Component({
    * 页面的初始数据
    */
   data: {
-    // historyList: aboutData.historyList
     historyList: []
   },
   methods: {

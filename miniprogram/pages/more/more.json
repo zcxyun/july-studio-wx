@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "card-list": "/components/card-list/card-list"
-  }
+  },
+  "enablePullDownRefresh": true
 }

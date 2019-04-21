@@ -1,7 +1,4 @@
-// pages/home/home.js
 import { chunk } from '../../utils/collection.js'
-import homeData from '../../data/home.js'
-const app = getApp()
 Component({
   options: {
     addGlobalClass: true
@@ -12,7 +9,6 @@ Component({
   data: {
     swiperList: [],
     dotStyle: true,
-    // iconList: [],
     isCard: false,
     cardsInfo: [],
     iconSwiperList: [],
@@ -37,6 +33,9 @@ Component({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+      wx.showLoading({
+        title: '加载中...',
+      })
       this.activeTabBar()
       this.initData()
     },
@@ -86,6 +85,9 @@ Component({
         name: command.in(['画室展示', '作品墙', '部分作品'])
       }).get({
         success: res => {
+          for (let i of res.data) {
+            i.cardList.splice(3)
+          }
           this.setData({
             cardsInfo: res.data
           })
@@ -104,7 +106,7 @@ Component({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+      wx.hideLoading()
     },
 
     /**

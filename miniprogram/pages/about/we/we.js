@@ -1,4 +1,3 @@
-// pages/about/we/we.js
 Component({
   options: {
     addGlobalClass: true

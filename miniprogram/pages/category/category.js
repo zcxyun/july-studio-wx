@@ -1,6 +1,3 @@
-// pages/category/category.js
-import categoryData from '../../data/category.js'
-const app = getApp()
 Component({
   options: {
     addGlobalClass: true
@@ -10,7 +7,6 @@ Component({
    */
   data: {
     isCard: true,
-    // list: categoryData.cardsInfo,
     list: [],
     tabCur: 0,
     mainCur: 0,
@@ -74,6 +70,9 @@ Component({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+      wx.showLoading({
+        title: '加载中...',
+      })
       this.activeTabBar()
       this.initData()
     },
@@ -85,6 +84,9 @@ Component({
         name: _.nin(['画室展示', '作品墙', '部分作品'])
       }).get({
         success: res => {
+          for (let i of res.data) {
+            i.cardList.splice(3)
+          }
           this.setData({
             list: res.data
           })
@@ -103,7 +105,7 @@ Component({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+      wx.hideLoading()
     },
 
     /**
