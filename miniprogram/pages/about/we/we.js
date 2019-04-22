@@ -55,6 +55,14 @@ Component({
         }
       })
     },
+    onQRCode: function (e) {
+      const index = e.currentTarget.dataset.index
+      const urls = this.data.QRCodes.map(item => item.code_pic_url)
+      wx.previewImage({
+        urls,
+        current: index
+      })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

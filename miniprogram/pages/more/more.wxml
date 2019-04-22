@@ -1,7 +1,8 @@
 <view class="">
   <cu-custom bgColor="bg-gradual-red" isBack="{{true}}">
     <view slot="backText">返回</view>
-    <view slot="content">{{cardInfo.name}}</view>
+    <view slot="content">{{naviTitle}}</view>
   </cu-custom>
-  <card-list cardList="{{cardInfo.cardList}}" isCard="{{isCard}}"></card-list>
+  <card-list cardList="{{cardsToShow}}" isCard="{{isCard}}"></card-list>
+  <view class="cu-load bg-blue {{!isLoad?'loading':'over'}}" wx:if='{{showBottomLoading}}'></view>
 </view>

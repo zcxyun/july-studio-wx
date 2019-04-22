@@ -6,7 +6,7 @@
       <view>Hi！欢迎来到七月画室</view>
       <view class='margin-top-sm' wx:for="{{content}}" wx:key="index">{{item.section}}</view>
       <view class="image" wx:for="{{QRCodes}}" wx:key="index">
-        <image src="{{item.code_pic_url}}" mode="widthFix"></image>
+        <image src="{{item.code_pic_url}}" mode="widthFix" bindtap="onQRCode" data-index="{{item.code_pic_url}}"></image>
         <view class='text-lg text-green text-center'>{{item.title}}</view>
       </view>
     </view>

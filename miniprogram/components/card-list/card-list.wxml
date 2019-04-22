@@ -2,7 +2,7 @@
 		<block wx:for="{{cardList}}" wx:key="index">
 		  <view class="cu-card case {{isCard?'no-card':''}}">
 		    <view class="cu-item">
-		      <view class="image" bindtap="onPhoto" data-header-img="{{item.headerImg}}">
+		      <view class="image" bindtap="onPhoto" data-index="{{item.headerImg}}">
 		        <image src="{{item.headerImg}}" mode="widthFix"></image>
 		        <view class="cu-tag bg-{{item.tagBgColor}}">{{item.tag}}</view>
 		        <!-- <view class="cu-bar bg-shadeBottom"> <text class="text-cut">{{item.headerImgText}}</text></view> -->

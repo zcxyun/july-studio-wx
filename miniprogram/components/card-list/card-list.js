@@ -23,9 +23,11 @@ Component({
    */
   methods: {
     onPhoto(e) {
-      const headerImg = e.currentTarget.dataset.headerImg
+      const index = e.currentTarget.dataset.index
+      const urls = this.properties.cardList.map(item => item.headerImg)
       wx.previewImage({
-        urls: [headerImg]
+        urls: urls,
+        current: index
       })
     }
   }
