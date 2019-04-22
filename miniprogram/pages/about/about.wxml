@@ -40,7 +40,7 @@
       </view>
       <view class="cu-item arrow" bindtap="onTapPhone">
         <button class="cu-btn content" open-type="getPhoneNumber">
-          <text class="icon-mobilefill text-orange"></text>
+          <text class="icon-mobilefill text-green"></text>
           <text class="text-grey">画室电话</text>
         </button>
       </view>
@@ -49,6 +49,12 @@
           <text class="icon-locationfill text-orange"></text>
           <text class="text-grey">画室地址</text>
         </navigator>
+      </view>
+      <view class='cu-item arrow'>
+        <button class='cu-btn content' open-type='share'>
+          <text class="icon-share text-blue"></text>
+          <text class="text-grey">分享</text>
+        </button>
       </view>
     </view>
     <view class="cu-tabbar-height"></view>
