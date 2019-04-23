@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -48,6 +48,13 @@
 					"id": 3,
 					"name": "about",
 					"pathName": "pages/about/about",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "we",
+					"pathName": "pages/about/we/we",
 					"query": "",
 					"scene": null
 				}

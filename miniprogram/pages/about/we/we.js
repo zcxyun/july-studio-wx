@@ -6,8 +6,8 @@ Component({
    * 页面的初始数据
    */
   data: {
-    content: [],
-    QRCodes: []
+    content: []
+    // QRCodes: []
   },
   methods: {
     /**
@@ -19,7 +19,7 @@ Component({
       })
       const db = wx.cloud.database()
       this.initContent(db)
-      this.initQRCode(db)
+      // this.initQRCode(db)
     },
     initContent: function (db) {
       db.collection('we').get({
@@ -38,31 +38,31 @@ Component({
         }
       })
     },
-    initQRCode: function (db) {
-      db.collection('QR-code').get({
-        success: res => {
-          this.setData({
-            QRCodes: res.data
-          })
-          console.log('[数据库] [查询记录] 成功: ', res)
-        },
-        fail: err => {
-          wx.showToast({
-            icon: 'none',
-            title: '查询记录失败'
-          })
-          console.log('[数据库] [查询记录] 失败：', err)
-        }
-      })
-    },
-    onQRCode: function (e) {
-      const index = e.currentTarget.dataset.index
-      const urls = this.data.QRCodes.map(item => item.code_pic_url)
-      wx.previewImage({
-        urls,
-        current: index
-      })
-    },
+    // initQRCode: function (db) {
+    //   db.collection('QR-code').get({
+    //     success: res => {
+    //       this.setData({
+    //         QRCodes: res.data
+    //       })
+    //       console.log('[数据库] [查询记录] 成功: ', res)
+    //     },
+    //     fail: err => {
+    //       wx.showToast({
+    //         icon: 'none',
+    //         title: '查询记录失败'
+    //       })
+    //       console.log('[数据库] [查询记录] 失败：', err)
+    //     }
+    //   })
+    // },
+    // onQRCode: function (e) {
+    //   const index = e.currentTarget.dataset.index
+    //   const urls = this.data.QRCodes.map(item => item.code_pic_url)
+    //   wx.previewImage({
+    //     urls,
+    //     current: index
+    //   })
+    // },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
