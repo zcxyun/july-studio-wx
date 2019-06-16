@@ -11,8 +11,7 @@ Component({
     dotStyle: true,
     isCard: false,
     cardsInfo: [],
-    iconSwiperList: [],
-    pageCur: ''
+    iconSwiperList: []
   },
 
   methods: {
@@ -82,7 +81,7 @@ Component({
     initCards: function (db) {
       const command = db.command
       db.collection('card').where({
-        name: command.in(['画室展示', '作品墙', '部分作品'])
+        name: command.nin(['画室展示', '作品墙', '部分作品'])
       }).get({
         success: res => {
           for (let i of res.data) {
@@ -102,6 +101,7 @@ Component({
         }
       })
     },
+    
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

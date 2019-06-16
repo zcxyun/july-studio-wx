@@ -1,5 +1,6 @@
 <view class="home-container">
   <cu-custom bgColor="bg-gradual-red"><view slot="content">七月画室</view></cu-custom>
+  <official-account></official-account>
   <card-swiper swiperList="{{swiperList}}" dotStyle="{{dotStyle}}"></card-swiper>
   <icon-list dotStyle="{{dotStyle}}" iconSwiperList="{{iconSwiperList}}"></icon-list>
   <block wx:for="{{cardsInfo}}" wx:key="id">

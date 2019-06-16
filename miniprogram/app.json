@@ -2,10 +2,6 @@
   "pages": [
     "pages/home/home",
     "pages/category/category",
-    "pages/about/about",
-    "pages/about/history/history",
-    "pages/about/address/address",
-    "pages/about/we/we",
     "pages/more/more"
   ],
   "window": {
@@ -27,10 +23,6 @@
       {
         "pagePath": "pages/category/category",
         "text": "分类"
-      },
-      {
-        "pagePath": "pages/about/about",
-        "text": "关于"
       }
     ]
   }

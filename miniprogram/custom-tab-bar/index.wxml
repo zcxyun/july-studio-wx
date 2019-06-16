@@ -17,12 +17,5 @@
       </view>
       <view class="{{pageCur=='category'?'text-orange':'text-gray'}}">分类</view>
     </view>
-    <view class="action" bindtap="NavChange" data-cur="about">
-      <view class='icon-cu-image'>
-        <text class="lg" class="icon-people{{pageCur == 'about'?'fill':''}} text-{{pageCur == 'about'?'green':'gray'}}">
-        </text>
-      </view>
-      <view class="{{pageCur=='about'?'text-green':'text-gray'}}">关于</view>
-    </view>
   </view>
 </view>

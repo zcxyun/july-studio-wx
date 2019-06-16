@@ -3,6 +3,7 @@
     <view slot="backText">返回</view>
     <view slot="content">{{naviTitle}}</view>
   </cu-custom>
+  <official-account></official-account>
   <card-list cardList="{{cardsToShow}}" isCard="{{isCard}}"></card-list>
   <view class="cu-load bg-blue {{!isLoad?'loading':'over'}}" wx:if='{{showBottomLoading}}'></view>
 </view>
